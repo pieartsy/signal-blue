@@ -1,0 +1,56 @@
+::AddBulletParagraph [widget nobr]
+/* similar to the AddParagraph widget, but with the speaker being a bullet.
+
+ex:
+normal bullet speaking
+<<AddbulletParagraph "Logical response" "Logic">>
+
+if it's a passive check
+<<AddbulletParagrah "Logical response" "Logic" "Success" "Heroic">>
+
+args[0] = paragraph
+1 = name of bullet
+
+if it's a passive check:
+    2 = difficulty
+    3 = success or fail
+
+*/
+<<widget "AddBulletParagraph">>
+<<silently>>
+/* sets a temporary variable, _bulletpara, which will be used for the DisplayPara widget */
+    <<set _bulletpara to "">>
+
+    /* sets _bulletname to the second argument, the bullet, in uppercase.*/
+    <<set _bulletname to ($args[1])>>
+
+    /*If the bullet name is in the $motorics array, set $currentspeaker to the bullet, styling it with the .motorics and .speaker classes. same with the others. */
+    <<switch _bulletname>>
+        <<case "task">>
+            <<set $currentspeaker to ("@@.speaker;☐@@")>>
+        <<case "taskdone">>
+            <<set $currentspeaker to ("@@.speaker;☑@@")>>
+        <<case "note">>
+            <<set $currentspeaker to ("@@.speaker;―@@")>>
+        <<case "thought">>
+            <<set $currentspeaker to ("@@.speaker;☁@@")>>
+        <<case "event">>
+            <<set $currentspeaker to ("@@.speaker;○@@")>>
+        <<case "observation">>
+            <<set $currentspeaker to ("@@.speaker;👁@@")>>
+        <<case "important">>
+            <<set $currentspeaker to ("@@.speaker;☆@@")>>
+    <</switch>>
+
+    <<set $currentspeaker += " ">>
+
+    /*
+    set _bulletpara to $currentspeaker + paragraph, and push to $paragraphs.
+    then set the current speaker to nothing (so a name doesn't keep appearing over and over)
+    */
+    <<set _bulletpara to (_bulletpara + $currentspeaker + $args[0])>>
+    <<set $currentspeaker to "">>
+
+    <<run $paragraphs.push(_bulletpara)>>
+<</silently>>
+<</widget>>

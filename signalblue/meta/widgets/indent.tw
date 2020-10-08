@@ -1,0 +1,5 @@
+::IndentWidget [widget nobr]
+<<widget "indent">><<nobr>>
+    <<set _style to "display:inline-block;text-indent:" + $args[0] + "em">>
+    <span @style="_style">$args[1]</span>
+<</nobr>><</widget>>

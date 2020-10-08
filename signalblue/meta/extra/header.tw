@@ -1,4 +1,4 @@
-:: PassageHeader
+:: PassageHeader [nobr]
 /*resets all variables that would display paragraphs and overlays back to empty.
 
 lastoption is used with the DisplayOptions passage. When starting a new passage, it shows the option you took in grey. */

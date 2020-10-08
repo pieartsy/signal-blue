@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=David+Libre:wght@400;700&family=Titillium+Web:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&&family=Titillium+Web:wght@300&display=swap');
 
 html {
   height: 100%;
@@ -6,18 +6,18 @@ html {
 
 body, tw-story
 {
-  font-family: 'David Libre', serif;
+  font-family: 'Kalam', cursive;
   margin-left: 2em;
-  color: #d2d3cd;
+  color: #120e4b;
+  background: #4b4694;
   height: 100%;
 }
 
-
 #story {
   height: 100%;
-  overflow-y: auto;
-  margin-top: 0em;
+  margin-top: 3em;
   margin-bottom: 0em;
+  border-radius: 10px;
 }
 
 .passage {
@@ -28,17 +28,30 @@ body, tw-story
 }
 
 a {
-  color: #b6523a;
+  color: #4337af;
   text-decoration: none;
 }
 
 a:hover {
-  color: white;
+  color: #120e4b;
   text-decoration: none;
 }
 a:active {
-  color: white;
+  color: #4b4694;
 }
+
+.paper {
+  padding: 37px 55px 27px;
+  position: relative;
+  background: rgb(233, 233, 243);
+  background: -webkit-linear-gradient(top, #DFE8EC 0%, white 8%) 0 57px;
+  background: -moz-linear-gradient(top, #DFE8EC 0%, white 8%) 0 57px;
+  background: linear-gradient(top, #DFE8EC 0%, white 8%) 0 57px;
+  -webkit-background-size: 100% 30px;
+  -moz-background-size: 100% 30px;
+  -ms-background-size: 100% 30px;
+  background-size: 100% 30px;
+  }
 
 /* for option list */
 .passage ol {
@@ -49,25 +62,9 @@ a:active {
   font-weight: bold;
 }
 
-/* skill voice colors */
-.psyche {
-  color: #705cbb;
-}
-
-.fysique {
-  color: #c6496b;
-}
-
-.intellect {
-  color: #6cc6ce;
-}
-
-.motorics {
-  color: #e4b934;
-}
-
 .speaker {
   text-transform: uppercase;
+  font-weight: bold;
   margin-left: -1.5em;
 }
 
@@ -91,11 +88,11 @@ span.continueblock {
 }
 
 a.macro-linkreplace {
-  background-color: #90280f;
+  background-color: #4b4694;
   color: white;
-  font-family: 'Titillium Web', sans-serif;
   margin-left: -1.5em;
   display: block;
+  border-radius: 10px;
 }
 
 a.macro-linkreplace .padding {
@@ -105,105 +102,60 @@ a.macro-linkreplace .padding {
   display: block;
 }
 
-a.macro-linkreplace .intoverlay  {
-  background-image: [img[intoverlay]];
-  background-size: cover;
+/* edits to sidebar and dialog */
+
+#ui-dialog-body {
+	background-color: rgb(233, 233, 243);
+	border: 1px solid #120e4b;;
+	text-align: left;
+	line-height: 1.5;
+	padding: 1em;
 }
 
-a.macro-linkreplace .psyoverlay  {
-  background-image: [img[psyoverlay]];
-  background-size: cover;
+#ui-dialog-titlebar {
+	background-color: #4b4694;
+	min-height: 24px;
 }
 
-a.macro-linkreplace .fysoverlay  {
-  background-image: [img[fysoverlay]];
-  background-size: cover;
+#ui-bar {
+	background-color: rgb(233, 233, 243);
+	border-right: 1px solid #120e4b;
+	text-align: center;
 }
 
-a.macro-linkreplace .motoverlay  {
-  background-image: [img[motoverlay]];
-  background-size: cover;
+#menu li a {
+	display: block;
+	padding: 0.25em 0.75em;
+	border: 1px solid transparent;
+	color: #120e4b;
+	text-transform: uppercase;
+}
+#menu li a:hover {
+	background-color:  #4b4694;
+	border-color: #eee;
 }
 
-/* greentext */
-.green {
-  color: #98b48b; 
-  margin-left: -1.5em;
+#ui-bar-toggle,
+#ui-bar-history [id|="history"] {
+	font-size: 1.2em;
+	line-height: inherit;
+	color: #120e4b;
+	background-color: transparent;
+	border: 1px solid #444;
 }
 
-/* check overlay animations */
-.CheckOverlay {
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  pointer-events: none;
-  opacity: 0;
-  animation-name: Flash;
-  animation-duration: 2s;
+#ui-bar-toggle:hover {
+	background-color: #4b4694;
+  border-color: #eee;
 }
 
-#SuccessImg {
-  background: [img[SuccessOverlay]] no-repeat right;
-  background-size: cover;
+#ui-bar-history [id|="history"]:hover {
+	background-color: #4b4694;
+	border-color: #eee;
 }
 
-#FailureImg {
-  background: [img[FailureOverlay]] no-repeat right;
-  background-size: cover;
-}
-
-@keyframes Flash {
-  0%  {opacity: 0}
-  20% {opacity: 1}
-  50% {opacity: 1}
-  100% {opacity: 0}
-}
-
-.CheckText {
-  color: white;
-  font-family: 'Titillium Web', sans-serif;
-  position: absolute;
-  bottom: 25%;
-  left: 50%;
-  opacity: 0;
-  padding: 0.5em;
-  padding-left: 1.5em;
-  padding-right: 1.5em;
-  animation-name: SlideAndFade;
-  animation-duration: 2.5s;
-  animation-delay: 1s;
-}
-
-#CheckSuccess {
-  background-color: #40ce68;
-  box-shadow: 0em 0em 0.2em 0.3em #40ce68;
-}
-
-#CheckFailure {
-  background-color: #90280f;
-  box-shadow: 0em 0em 0.2em 0.3em #90280f;
-}
-
-@keyframes SlideAndFade {
-  0% {opacity: 0.75; left: 45%}
-  10% {opacity: 1; left: 50%}
-  60% {opacity: 1; left: 50%}
-  100% {opacity: 0; left: 80%}
-}
-
-/* styling for white check */
-.check a {
-  font-weight: bold;
-  background-color: #d2d3cd;
-  color: black;
-  padding: 3px;
-  display: inline-block;
-}
-
-.check a:hover {
-  background-color: #82837f;
-  color: white;
+#ui-bar-history [id|="history"]:disabled {
+	color: rgb(160, 160, 160);
+	background-color: transparent;
+	border-color: #444;
 }

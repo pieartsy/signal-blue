@@ -9,10 +9,6 @@
     2 = flag to change
     3 = flag value
 
-    if it's simulating a check:
-    4 = skill
-    5 = difficulty label
-
     extremely modular.
 
     normal option
@@ -20,14 +16,7 @@
 
     option with a flag
     ex: <<AddOption "option with a flag" "Passage" "var" "value">>
-
-    option with a flag and a check
-    ex: <<AddOption "option with a flag and check" "Passage" "var" "value" "logic" "easy">>
-
-    option with only a check (must have empty values for the flag arguments)
-    ex: <<AddOption "option with a flag and check" "Passage" "" "" "logic" "easy">>
-
 */
 <<widget "AddOption">>
-    <<run $optionmap.set($args[0], [$args[1], $args[2], $args[3], $args[4], $args[5]])>>
+    <<run $optionmap.set($args[0], [$args[1], $args[2], $args[3]])>>
 <</widget>>

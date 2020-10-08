@@ -1,0 +1,10 @@
+::Start [nobr]
+<<addclass "#story" "paper">>
+<<AddParagraph "Hello!" "Aster">>
+<<AddBulletParagraph "Test bullet" "task">>
+<<AddBulletParagraph "Test bullet" "taskdone">>
+<<AddBulletParagraph "Test bullet" "thought">>
+<<AddBulletParagraph "Test bullet" "event">>
+<<AddBulletParagraph "Test bullet" "note">>
+<<AddBulletParagraph "Test bullet" "observation">>
+<<AddBulletParagraph "Test bullet" "important">>
