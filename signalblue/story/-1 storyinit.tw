@@ -1,5 +1,5 @@
 :: StoryInit
 <<silently>>
 <<set $optionmap to new Map()>>
-<<set $flagsMap to {}>>
+<<set $flagsMap to new Map()>>
 <</silently>>

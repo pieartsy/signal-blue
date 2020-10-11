@@ -9,18 +9,10 @@ if there's a current speaker:
 1 = the speaker of the paragraph (if any)
 
 */
-<<widget "AddParagraph">>
+<<widget "AddPara">>
 <<silently>>
 /* sets a temporary variable, _para, which will be used for the DisplayPara widget */
     <<set _para to "">>
-    /*     if $paraAppendMode (used for greentext) is true, add greentext, then clear the greentext and set it back to false. */
-    <<if $paraAppendMode is true>>
-        <<for _text range $greentext>>
-            <<set _para to (_para + _text + "<br /><br />")>>
-        <</for>>
-        <<set $greentext to []>>
-        <<set $paraAppendMode to false>>
-    <</if>>
 
     /*if there's a 2nd argument, set $current speaker to the second argument, styled with the .speaker class
     set _para to $currentspeaker + paragraph, and push to $paragraphs.

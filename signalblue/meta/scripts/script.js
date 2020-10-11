@@ -24,3 +24,4 @@ $(document).on("keyup", function (e) {
   }
 });
 
+UIBar.stow();

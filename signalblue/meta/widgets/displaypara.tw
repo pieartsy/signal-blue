@@ -16,17 +16,7 @@ this shows up only at PassageFooter; you don't need to call it otherwise
 */
 <<nobr>>
 <<if $paragraphs.length > 0>>
-	<<if _overlay is "int">>
-		<<linkreplace "@@#ContinueBtn;.padding.intoverlay;CONTINUE ➤@@" t8n>><<DisplayParagraphs>><</linkreplace>>
-	<<elseif _overlay is "psy">>
-		<<linkreplace "@@#ContinueBtn;.padding.psyoverlay;CONTINUE ➤@@" t8n>><<DisplayParagraphs>><</linkreplace>>
-	<<elseif _overlay is "fys">>
-		<<linkreplace "@@#ContinueBtn;.padding.fysoverlay;CONTINUE ➤@@" t8n>><<DisplayParagraphs>><</linkreplace>>
-	<<elseif _overlay is "mot">>
-		<<linkreplace "@@#ContinueBtn;.padding.motoverlay;CONTINUE ➤@@" t8n>><<DisplayParagraphs>><</linkreplace>>
-	<<else>>
-		<<linkreplace "@@#ContinueBtn;.padding;CONTINUE ➤@@" t8n>><<DisplayParagraphs>><</linkreplace>>
-	<</if>>
+	<<linkreplace "@@#ContinueBtn;.padding;CONTINUE ➤@@" t8n>><<DisplayParagraphs>><</linkreplace>>
 <<else>>
 	/*otherwise, display options.*/
 	<<include DisplayOptions>>

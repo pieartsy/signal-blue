@@ -1,0 +1,34 @@
+::Wake up [nobr]
+<<AddBulletPara "It's time to get up." "im">>
+<<AddBulletPara "Where the hell am I?" "th">>
+<<AddBulletPara "There's a blurry redness in front of me - it's all I can see at the moment." "ob">>
+    <<AddBulletPara "Is this the afterlife? Did I die?!" "th" 1>>
+        <<AddBulletPara "Synapses still firing, heart still beating…" "ob" 2>>
+            <<AddBulletPara "Slower now, stronger." "ob" 3>>
+        <<AddBulletPara "And I'm breathing. There's air now." "ob" 2>>
+            <<AddBulletPara "Found air." "td" 3>>
+        <<AddBulletPara "I'm alive." "n" 2>>
+        <<AddBulletPara "It must be a light, shining through my closed eyelids." "n" 1>>
+<<AddBulletPara "Something whirs softly a short distance away. There’s occasional clinks as metal taps periodically against glass." "ob">>
+    <<AddBulletPara "A fan spinning above me. I’m lying down." "n" 1>>
+<<AddBulletPara "There's a stab in my chest every time I inhale. I can feel streaks of heat in gashes down my arms, and aching pressure in spots and bursts across my legs." "ob">>
+    <<AddBulletPara "And hands and shoulders and sides and stomach and face and…" "ob" 1>>
+        <<AddBulletPara "Broken rib. Lacerations, abrasions, and contusions across the body." "n" 2>>
+    <<AddBulletPara "My head is throbbing. There's an immense pressure in my brain, pushing outward like it wants to crack open the skull." "ob" 1>>
+        <<AddBulletPara "Cerebral edema due to head trauma; specific cause currently unknown." "n" 2>>
+    <<AddBulletPara "I got severely injured somehow. Somehow—" "n" 1>>
+            <<AddBulletPara "Tires screeching, burning rubber, splintering wood and soaring exhilara—" "im" 2>>
+<<AddBulletPara "Another wave of pain crashes through my head." "ev">>
+<<AddBulletPara "I can't stay lying here forever, I'll die." "im">>
+    <<AddBulletPara "Why would I die just by lying down while seriously injured?" "th" 1>>
+        <<AddBulletPara "Stillness is death." "im" 2>>
+<<AddBulletPara "Let me at least open my eyes and see where I am." "th">> 
+<<AddBulletPara "And then I need to get up." "im">>
+
+<<AddBulletPara "Open my eyes" "t">>
+<<AddBulletPara "Get up (again)" "t">>
+
+<<AddOption "☁ Wait, how do I know what edemas and contusions are?">>
+<<AddOption "☁ Why do I need to get up anyway?">>
+<<AddOption "○ Open my eyes.">>
+<<AddOption "○ Get up (again).">>

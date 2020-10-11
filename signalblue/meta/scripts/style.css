@@ -8,13 +8,11 @@ body, tw-story
 {
   font-family: 'Kalam', cursive;
   margin-left: 2em;
-  color: #120e4b;
-  background: #4b4694;
   height: 100%;
 }
 
 #story {
-  height: 100%;
+  height: auto;
   margin-top: 3em;
   margin-bottom: 0em;
   border-radius: 10px;
@@ -23,7 +21,7 @@ body, tw-story
 .passage {
   line-height: 1.25;
   font-size: large;
-  margin-left: 1.5em;
+  margin-left: 1.5rem;
   font-size: 1.5rem;
 }
 
@@ -40,6 +38,13 @@ a:active {
   color: #4b4694;
 }
 
+.hidden
+{
+visibility: hidden;
+opacity: 0;
+transition: visibility 0s 2s, opacity 2s linear;
+}
+
 .paper {
   padding: 37px 55px 27px;
   position: relative;
@@ -51,6 +56,8 @@ a:active {
   -moz-background-size: 100% 30px;
   -ms-background-size: 100% 30px;
   background-size: 100% 30px;
+  color: #120e4b;
+  background: #4b4694;
   }
 
 /* for option list */
@@ -106,7 +113,8 @@ a.macro-linkreplace .padding {
 
 #ui-dialog-body {
 	background-color: rgb(233, 233, 243);
-	border: 1px solid #120e4b;;
+  border: 1px solid #120e4b;;
+  color: #120e4b;
 	text-align: left;
 	line-height: 1.5;
 	padding: 1em;

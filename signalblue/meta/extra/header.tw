@@ -1,11 +1,6 @@
 :: PassageHeader [nobr]
-/*resets all variables that would display paragraphs and overlays back to empty.
-
-lastoption is used with the DisplayOptions passage. When starting a new passage, it shows the option you took in grey. */
+/*resets all variables that would display paragraphs and overlays back to empty.*/
 
 <<set $paragraphs to []>>
 <<set $overlays to []>>
-<<if $lastoption>>
-@@.speaker.pastchoice;You@@ @@.pastchoice;- $lastoption@@
-<</if>>
 <br>
