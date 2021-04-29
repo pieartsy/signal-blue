@@ -25,9 +25,9 @@
             <<para "And fuck being __safe__, too." "im" 3>>
 <<para "Put on clothes" "t">>
 
-<<opts "○ Find glasses" "Find glasses">>
-<<opts "○ Blow this popsicle stand" "Leave sans glasses or clothes">>
-<<opts "○ Put on clothes" "Clothes sans glasses">>
+<<opts "Find glasses" "Find glasses">>
+<<opts "Blow this popsicle stand" "Leave sans glasses or clothes">>
+<<opts "Put on clothes" "Clothes sans glasses">>
 
 ::Clothes sans glasses [nobr]
 <<flag "jacket">>
@@ -68,7 +68,7 @@
 <<para "Find myself again" "td">>
 <<para "Check the lining pockets!" "im">>
 
-<<opts "○ Check the pockets." "Find notebook sans glasses">>
+<<opts "Check the pockets." "Find notebook sans glasses">>
 
 ::Find notebook sans glasses [nobr]
 <<flag "notebook">>
@@ -85,5 +85,5 @@
         <<para "__Fuck__ being professional." "im" 2>>
         <<para "But the glasses thing is a good point." "im" 2>>
 
-<<opts "○ Find glasses" "Find glasses">>
-<<opts "○ Blow this popsicle stand" "Leave sans glasses">>
+<<opts "Find glasses" "Find glasses">>
+<<opts "Blow this popsicle stand" "Leave sans glasses">>

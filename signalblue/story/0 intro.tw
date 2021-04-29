@@ -26,8 +26,8 @@
 <<para "Find air" "t">>
 <<para "Get up" "t">>
 
-<<opts "○ Find air" "Find air">>
-<<opts "○ Get up" "Get up">>
+<<opts "Find air" "Find air">>
+<<opts "Get up" "Get up">>
 
 ::Find air [nobr]
 <<para "I inhale —" "ev">>
@@ -37,7 +37,7 @@
 <<para "Nothing is coming." "im">>
 <<para "No!" "th">>
 
-<<opts "○ Get up" "Get up">>
+<<opts "Get up" "Get up">>
 
 ::Get up [nobr]
 <<para "My limbs are burning." "ob">>

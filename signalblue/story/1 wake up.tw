@@ -28,8 +28,8 @@
 <<para "Open my eyes" "t">>
 <<para "Get up (again)" "t">>
 
-<<opts "☁ Wait, how do I know what edemas and contusions are?" "Edemas">>
-<<opts "○ Open my eyes." "Open eyes">>
+<<opts "Wait, how do I know what edemas and contusions are?" "Edemas">>
+<<opts "Open my eyes." "Open eyes">>
 
 ::Edemas [nobr]
 <<flag "notebooktask">>
@@ -41,7 +41,7 @@
     <<para "It’ll all come back when I find and reread it." "n" 2>>
             <<para "I think." "th" 3>>
 <<para "Find notebook" "t">>
-<<opts "○ Open my eyes." "Open eyes">>
+<<opts "Open my eyes." "Open eyes">>
 
 ::Open eyes [nobr]
 <<para "I peel my mucus-crusted eyes open with effort." "ev">>
@@ -60,5 +60,5 @@
 <<para "Find glasses" "t">>
 <<para "I’ve opened my eyes. Time to get up for real!" "im">>
 
-<<opts "○ Find glasses" "Find glasses">>
-<<opts "○ Get up (again)" "No glasses">>
+<<opts "Find glasses" "Find glasses">>
+<<opts "Get up (again)" "No glasses">>
