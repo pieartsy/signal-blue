@@ -1,9 +1,9 @@
-::AddOption [widget nobr]
+::opts [widget nobr]
 /* adds a key, $args[0], and value, an array containing $args 1, to $optionmap
     this becomes _optiontext and _optionpassage in the DisplayOptions passage
 
-    args[0] = text for the option.
-    1 = the passage that the option sends you to
+    args[0] = text for the opts.
+    1 = the passage that the opts sends you to
 
     if it's got a flag attached:
     2 = flag to change
@@ -11,12 +11,12 @@
 
     extremely modular.
 
-    normal option
-    ex: <<AddOption "option" "Passage">>
+    normal opts
+    ex: <<opts "opts" "Passage">>
 
-    option with a flag
-    ex: <<AddOption "option with a flag" "Passage" "var" "value">>
+    opts with a flag
+    ex: <<opts "opts with a flag" "Passage" "var" "value">>
 */
-<<widget "AddOption">>
+<<widget "opts">>
     <<run $optionmap.set($args[0], [$args[1], $args[2], $args[3]])>>
 <</widget>>

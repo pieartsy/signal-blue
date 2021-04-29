@@ -46,18 +46,16 @@ transition: visibility 0s 2s, opacity 2s linear;
 }
 
 .paper {
-  padding: 37px 55px 27px;
   position: relative;
   background: rgb(233, 233, 243);
   background: -webkit-linear-gradient(top, #DFE8EC 0%, white 8%) 0 57px;
   background: -moz-linear-gradient(top, #DFE8EC 0%, white 8%) 0 57px;
   background: linear-gradient(top, #DFE8EC 0%, white 8%) 0 57px;
-  -webkit-background-size: 100% 30px;
-  -moz-background-size: 100% 30px;
-  -ms-background-size: 100% 30px;
-  background-size: 100% 30px;
+  -webkit-background-size: 100% 1.875rem;
+  -moz-background-size: 100% 1.875rem;
+  -ms-background-size: 100% 1.875rem;
+  background-size: 100% 1.875rem;
   color: #120e4b;
-  background: #4b4694;
   }
 
 /* for option list */

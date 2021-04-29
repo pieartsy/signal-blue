@@ -1,0 +1,89 @@
+::No glasses [nobr]
+<<flag "up">>
+<<para "I prop myself onto my elbows." "ev">>
+<<para "My body seizes and I nearly collapse back down. The colors spin, then settle again." "ev" 1>>
+<<para "I’m getting sick of being hurt." "th" 1>>
+<<para "Move past this whole __pain__ thing! Stop focusing on it! Yes, I’m badly  injured, I don’t have to obsess over it." "im" 2>>
+<<para "And I don’t hurt as much as I’d expect to, anyway." "n" 2>>
+<<para "Stop focusing on the pain" "t">>
+    <<para "I have to focus on __action__. __Actionable__ things." "im" 1>>
+<<para "Stop focusing on the pain" "td">>
+<<para "I use my hands to push myself into a sitting position. They sink into cushioned upholstery." "ev" 1>>
+        <<para "A couch." "n" 2>>
+<<para "I swing my legs to the ground. Stand up." "ev">>
+<<para "Get up (again)" "td">>
+<<para "I still can’t see anything clearly, of course. The tall brown thing in front of me might be a door though." "ob">>
+<<para "Good job on getting up, now time to walk back out into the world! Get into the swing of things again!" "im">>
+<<para "Blow this popsicle stand" "t">>
+<<para "As I hobble forward, a cold breeze tickles my bare arms. My torso and legs too." "ev">>
+    <<para "Open window to my right, letting a little wind in." "ob" 1>>
+    <<para "I seem to be naked, or only have briefs on." "ob" 1>>
+        <<para "Going out while naked wouldn’t be very professional of me." "n" 2>>
+            <<para "Fuck being professional!" "im" 3>>
+        <<para "Going out while naked and nearly-blind wouldn't be very safe of me." "n" 2>>
+            <<para "No, seriously, __fuck__ being professional." "im" 3>>
+            <<para "And fuck being __safe__, too." "im" 3>>
+<<para "Put on clothes" "t">>
+
+<<opts "○ Find glasses" "Find glasses">>
+<<opts "○ Blow this popsicle stand" "Leave sans glasses or clothes">>
+<<opts "○ Put on clothes" "Clothes sans glasses">>
+
+::Clothes sans glasses [nobr]
+<<flag "jacket">>
+<<para "In the muddles of browns, greys, and blacks, it’s hard to tell what’s clothing and what’s not." "ob">>
+<<para "I shuffle slowly with my arms out, occasionally bending down to feel out an object." "ev">>
+    <<para "Hope I don't run into anything." "th" 1>>
+<<para "A large smudge floats in the air to the left side of the room." "ob">>
+    <<para "Bright. Fucking. Orange." "ob" 1>>
+        <<para "There’s a hole in me I’m suddenly aware of, a gnawing disquiet." "ev" 2>>
+        <<para "The whirring of the fan multiplies in  my ears, and the floor drops below me." "ob" 2>>
+            <<para "Like I'm being lifted above reality." "n" 3>>
+<<para "Find myself again" "t">>
+<<para "Somewhere far below, my feet walk toward the smudge. Until —" "ev">>
+    <<para "Something curved rolls out from underfoot —" "ev" 1>>
+    <<para "My leg shoots out in front of me —" "ev" 1>>
+    <<para "I fall back onto my ass —" "ev" 1>>
+        <<para "A shattering sound." "ob" 2>>
+        <<para "The orange smudge swings heavily back and forth." "ob" 2>>
+    <<para "Fuck!" "th" 1>>
+<<para "There might be broken glass on the floor now. It’s not safe to walk forward." "n">>
+    <<para "Shit!" "th" 1>>
+<<para "With a frustrated growl, I slam my fists on the floor." "ev">>
+    <<para "The smudge sways in a wider arc." "ev" 1>>
+    <<para "Then, miraculously, it falls —" "ev" 1>>
+        <<para "Flashing a blue underbelly —" "ob" 2>>
+    <<para "Onto my face." "ev" 1>>
+<<para "I clutch it between trembling fingers." "ev">>
+<<para "Thick, warm cotton. Two sleeves." "ob">>
+    <<para "I slide my arms through them." "ev" 1>>
+<<para "A high, ridged collar." "ob">>
+    <<para "I cuff it around my neck." "ev" 1>>
+        <<para "A gorget." "n" 2>>
+<<para "Cold, tiny metal grooves running up the front." "ob">>
+    <<para "I zip up the jacket." "ev" 1>>
+<<para "__My__ jacket." "th">>
+<<para "Slowly, I descend back into the world of the blurry room." "ev">>
+<<para "Put on clothes" "td">>
+<<para "Find myself again" "td">>
+<<para "Check the lining pockets!" "im">>
+
+<<opts "○ Check the pockets." "Find notebook sans glasses">>
+
+::Find notebook sans glasses [nobr]
+<<flag "notebook">>
+<<addclass "#story" "paper">>
+    <<para "My left hands slips deftly into the opposing pocket." "ev" >>
+        <<para "A small rectangular object, with stiff metal whorls on the side and many thin sheets." "ob" 1>>
+<<para "__My__ notebook." "th">>
+<<if $flags.includes("notebooktask")>>
+    <<para "Find notebook" "td">>
+<</if>>
+    <<para "I feel a __lot__ better." "th" 1>>
+<<para "There's other things in the pockets, but I can't examine them properly when I don't have my glasses. Finding them is probably more prudent than before, with the broken shards on the ground." "n">>
+<<para "Also, most people don’t consider wearing __solely__ a jacket to be  —" "n" 1>>
+        <<para "__Fuck__ being professional." "im" 2>>
+        <<para "But the glasses thing is a good point." "im" 2>>
+
+<<opts "○ Find glasses" "Find glasses">>
+<<opts "○ Blow this popsicle stand" "Leave sans glasses">>

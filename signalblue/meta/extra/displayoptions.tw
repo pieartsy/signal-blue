@@ -13,11 +13,11 @@ first line creates an ordered list
     _optionspassage[0] = the passage that the option sends you to
 
     if it's got a flag attached
-    1 = flag in $flagsMap
+    1 = flag in $flagsArray
     2 = flag's value
     */
 
-  <<if _optionpassage[1] and Object.keys($flagsMap).includes(_optionpassage[1])>>
+  <<if _optionpassage[1] and Object.keys($flagsArray).includes(_optionpassage[1])>>
   /* set styling to .option */
           @@.option;<li>-
               <<link _optiontext _optionpassage[0]>>

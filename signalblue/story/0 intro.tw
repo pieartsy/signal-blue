@@ -1,0 +1,134 @@
+::Start [nobr]
+<<para "It's time to get up." "im">>
+<<para "Where the hell am I?" "th">>
+<<para "I can't see anything." "ob">>
+    <<para "Or hear anything or taste anything or smell or touch or feel—" "ob" 1>>
+    <<para "That's the problem!" "im" 1>>
+<<para "Am I anywhere? Am I alive?" "th">>
+    <<para "No. Which is why I need to get up right now. It’s important." "im" 1>>
+<<para "I'm dead aren't I? Am I dead?!" "th">>
+    <<para "No, not yet. Synapses are still firing in my brain, transmitting thoughts. My heart is still beating." "ob" 1>>
+        <<para "Fast, oh so fast." "ob" 2>>
+        <<para "But so weak, too." "ob" 2>>
+<<para "Get. Up." "im">>
+<<para "Everything hurts. Throbbing, aching, stinging. There’s a ringing in my ears." "ob">>
+    <<para "I'm regaining sensory experience." "n" 1>>
+<<para "Through the ringing, people shouting indistinctly." "ob">>
+    <<para "Why are they shouting?" "th" 1>>
+<<para "It's hard to breathe." "ob">>
+<<para "There's no air in my lungs." "ob">>
+    <<para "People need air to breathe." "n" 1>>
+    <<para "People need to breathe to live." "n" 1>>
+        <<para "Am I dying?" "th" 2>>
+<<para "Get up!" "im">>
+<<para "Find air" "t">>
+<<para "Get up" "t">>
+
+<<opts "○ Find air" "Find air">>
+<<opts "○ Get up" "Get up">>
+
+::Find air [nobr]
+<<para "I inhale —" "ev">>
+    <<para "I try to inhale but there's a wall in my lungs." "ev" 1>>
+        <<para "A hit to the solar plexus can knock the wind out of people." "n" 2>>
+    <<para "The air won’t come. Nothing is coming." "ob" 1>>
+<<para "Nothing is coming." "im">>
+<<para "No!" "th">>
+
+<<opts "○ Get up" "Get up">>
+
+::Get up [nobr]
+<<para "My limbs are burning." "ob">>
+    <<para "Muscles aching for oxygen." "n" 1>>
+<<para "With effort, I lift my head." "ev">>
+    <<para "Nausea." "ob" 1>>
+    <<para "Dizziness." "ob" 1>>
+    <<para "A stabbing sensation behind my eyes." "ob" 1>>
+    <<para "Oh god that was a mistake." "th" 1>>
+<<para "My head falls again, despite myself, hitting something sharp and crumpled beneath it." "ev">>
+    <<para "Waves of searing pain radiate from the impact, my bones feel like they’re going to shatter, my nerves are screaming —" "ob" 1>>
+<<para "Get up now! I need to get up right now! Right now!" "im">>
+<<para "I can't! I can't breathe, I can't move, so why is this so goddamn important?!" "th">>
+    <<para "Because otherwise what's the point?" "im" 1>>
+<<para "People screaming…" "ob">>
+<<para "Fading…" "ob" 1>>
+    <<para "I'm fading…" "n" 2>>
+<<para "No! Not yet!" "th">>
+<<timed 20s>>
+    <<if $paragraphs.length == 0>>
+	    <<addclass ".passage" "hidden">>
+        <<timed 2s>>
+            <<goto "Wake up">>
+        <</timed>>
+    <</if>>
+<<next 2s>>
+    <<if $paragraphs.length == 0>>
+	    <<addclass ".passage" "hidden">>
+        <<timed 2s>>
+            <<goto "Wake up">>
+        <</timed>>
+    <</if>>
+<<next 2s>>
+    <<if $paragraphs.length == 0>>
+	    <<addclass ".passage" "hidden">>
+        <<timed 2s>>
+            <<goto "Wake up">>
+        <</timed>>
+    <</if>>
+<<next 2s>>
+    <<if $paragraphs.length == 0>>
+	    <<addclass ".passage" "hidden">>
+        <<timed 2s>>
+            <<goto "Wake up">>
+        <</timed>>
+    <</if>>
+<<next 2s>>
+    <<if $paragraphs.length == 0>>
+	    <<addclass ".passage" "hidden">>
+        <<timed 2s>>
+            <<goto "Wake up">>
+        <</timed>>
+    <</if>>
+<<next 2s>>
+    <<if $paragraphs.length == 0>>
+	    <<addclass ".passage" "hidden">>
+        <<timed 2s>>
+            <<goto "Wake up">>
+        <</timed>>
+    <</if>>
+<<next 2s>>
+    <<if $paragraphs.length == 0>>
+	    <<addclass ".passage" "hidden">>
+        <<timed 2s>>
+            <<goto "Wake up">>
+        <</timed>>
+    <</if>>
+<<next 2s>>
+    <<if $paragraphs.length == 0>>
+	    <<addclass ".passage" "hidden">>
+        <<timed 2s>>
+            <<goto "Wake up">>
+        <</timed>>
+    <</if>>
+<<next 2s>>
+    <<if $paragraphs.length == 0>>
+	    <<addclass ".passage" "hidden">>
+        <<timed 2s>>
+            <<goto "Wake up">>
+        <</timed>>
+    <</if>>
+<<next 2s>>
+    <<if $paragraphs.length == 0>>
+	    <<addclass ".passage" "hidden">>
+        <<timed 2s>>
+            <<goto "Wake up">>
+        <</timed>>
+    <</if>>
+<<next 2s>>
+    <<if $paragraphs.length == 0>>
+	    <<addclass ".passage" "hidden">>
+        <<timed 2s>>
+            <<goto "Wake up">>
+        <</timed>>
+    <</if>>
+<</timed>>

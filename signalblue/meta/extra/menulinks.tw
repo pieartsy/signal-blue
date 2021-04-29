@@ -30,14 +30,14 @@ You can press the spacebar on your keyboard to press the continue button.
 //Rather than having skill voices like Harry does in Disco Elysium, Kim thinks with the bullet journal method. Here are the symbols used and what they mean.//
 ☐ - An incomplete task.
 ☑ - A complete task.
-― - A note, something that Kim wants to remember or take note of. It can also be a relevant fact or deduction about a situation.
+➤ - A note, something that Kim wants to remember or take note of. It can also be a relevant fact or deduction about a situation.
 ☁ - A thought that Kim has about a situation.
 ○ - An event, used to describe actions that happen.
-👁 - An observation, something Kim perceives with his senses.
-✱ - Something deemed highly important by Kim.
+◇ - An observation, something Kim perceives with his senses.
+‼ - Something deemed highly important by Kim.
 
 ::CNs
-After effects of a car accident (more TBA)
+Aftereffects of a car accident (more TBA)
 
 ::Credits
 Original Twine macros and Disco Elysium-style framework - apepers on github: [[link| https://github.com/apepers/DiscoElysiumTwineMacros/]] and itch.io: [[link|https://apepers.itch.io/re-hearsed-a-disco-elysium-fanwork]].

@@ -1,0 +1,20 @@
+::Find glasses [nobr]
+<<if $flags.includes("up") && $flags.includes("jacket")>>
+    <<para "I carefully crawl-shuffle back in the vicinity of where I woke up." "ev">>
+        <<para "I look stupid." "th" 1>>
+            <<para "Well, I don't know how I look, but I imagine it's stupid." "th" 2>>
+    <<para "When I reach the couch, I start running my hands across it, grasping and pawing at the soft surface." "ev">>
+<<elseif $flags.includes("up")>>
+    <<para "I turn around to search the couch first, grasping and pawing at the soft surface." "ev">>
+<<elseif !$flags.includes("up")>>
+    <<para "I grasp and paw at whatever I’m laying on." "ev">>
+        <<para "It’s plush, with the texture of upholstery. Separate cushions hold up my head, my torso, and my legs." "ob" 1>>
+            <<para "A couch." "n" 2>>
+<</if>>
+    <<para "Nothing like slender frames or glass on top, but there are gaps between the cushions." "ob" 1>>
+<<para "I wiggle my fingers into the cracks." "ev">>
+    <<para "My hands feel half-stuck in a stiffened curl. The tendons protest, shaking as I extend them. " "ob" 1>>
+    <<para "After ages of cramped digging, I strike thin metal ore." "ev" 1>>
+        <<para "My glasses!" "th" 2>>
+<<para "Find glasses" "td">>
+<<para "I put them on immediately." "ev">>

@@ -1,0 +1,64 @@
+::Wake up [nobr]
+<<para "It's time to get up." "im">>
+<<para "Where the hell am I?" "th">>
+<<para "There's a blurry redness in front of me - it's all I can see at the moment." "ob">>
+    <<para "Is this the afterlife? Did I die?!" "th" 1>>
+        <<para "Synapses still firing, heart still beating…" "ob" 2>>
+            <<para "Slower now, stronger." "ob" 3>>
+        <<para "And I'm breathing. There's air now." "ob" 2>>
+            <<para "Find air." "td">>
+        <<para "I'm alive." "n" 2>>
+        <<para "The redness must be a light, shining through my closed eyelids." "n" 1>>
+<<para "Something whirs softly a short distance away. There’s occasional clinks as metal taps periodically against glass." "ob">>
+    <<para "A fan spinning above me. I’m lying down." "n" 1>>
+<<para "There's a stab in my chest every time I inhale. I can feel streaks of heat in gashes down my arms, and aching pressure in spots and bursts across my legs." "ob">>
+    <<para "And hands and shoulders and sides and stomach and face and…" "ob" 1>>
+        <<para "Broken rib. Lacerations, abrasions, and contusions across the body." "n" 2>>
+    <<para "My head is throbbing. There's an immense pressure in my brain, pushing outward like it wants to crack open the skull." "ob" 1>>
+        <<para "Cerebral edema due to head trauma; specific cause currently unknown." "n" 2>>
+    <<para "I got severely injured somehow. Somehow—" "n" 1>>
+            <<para "Tires screeching, burning rubber, splintering wood and soaring exhilara—" "im" 2>>
+<<para "Another wave of pain crashes through my head." "ev">>
+<<para "I can't stay lying here forever, I'll die." "im">>
+    <<para "Why would I die just by lying down while seriously injured?" "th" 1>>
+        <<para "Stillness is death." "im" 2>>
+<<para "Let me at least open my eyes and see where I am." "th">> 
+<<para "And then I need to get up." "im">>
+
+<<para "Open my eyes" "t">>
+<<para "Get up (again)" "t">>
+
+<<opts "☁ Wait, how do I know what edemas and contusions are?" "Edemas">>
+<<opts "○ Open my eyes." "Open eyes">>
+
+::Edemas [nobr]
+<<flag "notebooktask">>
+<<para "Cold concrete walls and a droning voice. On the desk in front of me, an oblong blue pen, scrawls of notes in my -" "n">>
+<<para "My notebook!" "th">>
+<<para "I need that." "im" 1>>
+<<para "Can't remember a thing without it." "th" 1>>
+    <<para "Which must explain the pale expanse where my memory should be." "n" 2>>
+    <<para "It’ll all come back when I find and reread it." "n" 2>>
+            <<para "I think." "th" 3>>
+<<para "Find notebook" "t">>
+<<opts "○ Open my eyes." "Open eyes">>
+
+::Open eyes [nobr]
+<<para "I peel my mucus-crusted eyes open with effort." "ev">>
+    <<para "It feels like prying apart locked doors." "ob" 1>>
+<<para "Open my eyes" "td">>
+<<para "The weak light from the fan spikes my pupils, but they quickly adjust." "ob">>
+<<para "I wait a few moments for my focus to adjust as well." "ev">>
+    <<para "It doesn’t." "ob" 1>>
+<<para "A few more moments, squinting at the smear of what I can only guess are the fan blades." "ev">>
+    <<para "Still just stains of feathered color." "ob" 1>>
+    <<para "Is the concussion that bad?" "th" 1>>
+        <<para "Each individual tile on the wall blobs together as a hand smacks the back of my head. Something clatters to the ground and a small blur of pale pink swipes it from below me, laughing and jeering." "n" 2>>
+        <<para "“Give them back,” I say, voice cracking. “Unless you want your curfews pushed up again, hm? Give my glasses back right now.”" "n" 2>>
+    <<para "So the near-blindness __isn't__ from the concussion." "n" 1>>
+    <<para "That’s good, I guess." "th" 1>>
+<<para "Find glasses" "t">>
+<<para "I’ve opened my eyes. Time to get up for real!" "im">>
+
+<<opts "○ Find glasses" "Find glasses">>
+<<opts "○ Get up (again)" "No glasses">>

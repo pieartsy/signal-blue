@@ -1,12 +1,12 @@
-::AddBulletParagraph [widget nobr]
+::para [widget nobr]
 /* similar to the AddParagraph widget, but with the speaker being a bullet.
 
 ex:
 normal bullet speaking
-<<AddbulletParagraph "Logical response" "Logic">>
+<<para "Logical response" "Logic">>
 
 if it's a passive check
-<<AddbulletParagrah "Logical response" "Logic" "Success" "Heroic">>
+<<para "Logical response" "Logic" "Success" "Heroic">>
 
 args[0] = paragraph
 1 = name of bullet
@@ -16,7 +16,7 @@ if it's a passive check:
     3 = success or fail
 
 */
-<<widget "AddBulletPara">>
+<<widget "para">>
 <<silently>>
 /* sets a temporary variable, _bulletpara, which will be used for the DisplayPara widget */
     <<set _bulletpara to "">>
@@ -41,7 +41,7 @@ if it's a passive check:
             <<set $currentspeaker += (">☑</span>")>>
     /*Note*/
         <<case "n">>
-            <<set $currentspeaker += (">―</span>")>>
+            <<set $currentspeaker += (">➤</span>")>>
     /*Memory*/
         <<case "th">>
             <<set $currentspeaker += (">☁</span>")>>
@@ -50,10 +50,10 @@ if it's a passive check:
             <<set $currentspeaker += (">○</span>")>>
     /*Observation*/
         <<case "ob">>
-            <<set $currentspeaker += (">👁</span>")>>
+            <<set $currentspeaker += (">◇</span>")>>
     /*Important*/
         <<case "im">>
-            <<set $currentspeaker += (">✱</span>")>>
+            <<set $currentspeaker += (">‼</span>")>>
     <</switch>>
 
     <<set $currentspeaker += " ">>

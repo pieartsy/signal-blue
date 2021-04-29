@@ -1,4 +1,15 @@
 :: PassageHeader [nobr]
+/*to make sure that when the player jumps back and forth between passages, the notebook bg is applied properly */
+<<script>>
+    if (State.getVar('$flags').indexOf('notebook') > -1) {
+            $('#story').addClass('paper')
+        }
+    else {
+        if ($('#story').hasClass('paper')) {
+            $('#story').removeClass('paper')
+        }
+    }
+<</script>>
 /*resets all variables that would display paragraphs and overlays back to empty.*/
 
 <<set $paragraphs to []>>
