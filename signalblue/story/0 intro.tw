@@ -1,4 +1,6 @@
 ::Start [nobr]
+<<para "\"Hello!\"" "ev">>
+<<para "This enby has bright pink hair and an even brighter smile." "ob" 1>>
 <<para "It's time to get up." "im">>
 <<para "Where the hell am I?" "th">>
 <<para "I can't see anything." "ob">>

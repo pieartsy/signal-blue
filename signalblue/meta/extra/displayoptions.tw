@@ -17,12 +17,12 @@ first line creates an ordered list
     2 = flag's value
     */
 
-  <<if _optionpassage[1] and Object.keys($flagsArray).includes(_optionpassage[1])>>
+  <<if _optionpassage[2] and !Object.keys($flagsArray).includes(_optionpassage[2])>>
   /* set styling to .option */
           @@.option;<li>-
               <<link _optiontext _optionpassage[0]>>
                 <<set $lastoption to _optiontext>>
-                <<SetFlag _optionpassage[1] _optionpassage[2]>>
+                <<flag _optionpassage[2]>>
               <</link>>
             </li>@@
   <<else>>

@@ -100,7 +100,7 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 		<div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<!-- UUID://5BD21ED8-62C2-4C12-9F44-05FA8FE75082// --><tw-storydata name="Signal Blue" startnode="17" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="5BD21ED8-62C2-4C12-9F44-05FA8FE75082" zoom="1" format="SugarCube" format-version="2.30.0" options="debug" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&&family=Titillium+Web:wght@300&display=swap');
+	<!-- UUID://5BD21ED8-62C2-4C12-9F44-05FA8FE75082// --><tw-storydata name="Signal Blue" startnode="16" creator="Tweego" creator-version="2.1.1+81d1d71" ifid="5BD21ED8-62C2-4C12-9F44-05FA8FE75082" zoom="1" format="SugarCube" format-version="2.30.0" options="debug" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&&family=Titillium+Web:wght@300&display=swap');
 
 html {
   height: 100%;
@@ -401,12 +401,12 @@ first line creates an ordered list
     2 = flag&#39;s value
     */
 
-  &lt;&lt;if _optionpassage[1] and Object.keys($flagsArray).includes(_optionpassage[1])&gt;&gt;
+  &lt;&lt;if _optionpassage[2] and !Object.keys($flagsArray).includes(_optionpassage[2])&gt;&gt;
   /* set styling to .option */
           @@.option;&lt;li&gt;-
               &lt;&lt;link _optiontext _optionpassage[0]&gt;&gt;
                 &lt;&lt;set $lastoption to _optiontext&gt;&gt;
-                &lt;&lt;SetFlag _optionpassage[1] _optionpassage[2]&gt;&gt;
+                &lt;&lt;flag _optionpassage[2]&gt;&gt;
               &lt;&lt;/link&gt;&gt;
             &lt;/li&gt;@@
   &lt;&lt;else&gt;&gt;
@@ -504,26 +504,17 @@ if (paragraphs.length &gt; 1) {
 	paragraphs[paragraphs.length-2].classList.add(&quot;dim&quot;);
 }
 &lt;&lt;/script&gt;&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;/nobr&gt;&gt;\
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="SkillFailure" tags="widget nobr" position="100,225" size="100,100">/* displays the failure animation.
-
-&lt;&lt;SkillFailure&gt;&gt;
-
-*/
-&lt;&lt;widget &quot;SkillFailure&quot;&gt;&gt;
-&lt;div id=&quot;FailureImg&quot; class=&quot;CheckOverlay&quot;&gt;&lt;/div&gt;
-&lt;div id=&quot;CheckFailure&quot; class=&quot;CheckText&quot;&gt;CHECK FAILURE&lt;/div&gt;
-&lt;&lt;AddParagraph &quot;//Red flashes at the edges of your vision - a failure.//&quot;&gt;&gt;
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="flag" tags="widget nobr" position="225,225" size="100,100">/* easier syntax to set a flag, either in the text itself or in DisplayOptions 
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="flag" tags="widget nobr" position="100,225" size="100,100">/* easier syntax to set a flag, either in the text itself or in DisplayOptions 
 
 &lt;&lt;flag &quot;realization&quot;&gt;&gt;
 */
 
 &lt;&lt;widget &quot;flag&quot;&gt;&gt;
     &lt;&lt;set $flags.push($args[0])&gt;&gt;
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="IndentWidget" tags="widget nobr" position="350,225" size="100,100">&lt;&lt;widget &quot;indent&quot;&gt;&gt;&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="IndentWidget" tags="widget nobr" position="225,225" size="100,100">&lt;&lt;widget &quot;indent&quot;&gt;&gt;&lt;&lt;nobr&gt;&gt;
     &lt;&lt;set _style to &quot;display:inline-block;text-indent:&quot; + $args[0] + &quot;em&quot;&gt;&gt;
     &lt;span @style=&quot;_style&quot;&gt;$args[1]&lt;/span&gt;
-&lt;&lt;/nobr&gt;&gt;&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="opts" tags="widget nobr" position="475,225" size="100,100">/* adds a key, $args[0], and value, an array containing $args 1, to $optionmap
+&lt;&lt;/nobr&gt;&gt;&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="opts" tags="widget nobr" position="350,225" size="100,100">/* adds a key, $args[0], and value, an array containing $args 1, to $optionmap
     this becomes _optiontext and _optionpassage in the DisplayOptions passage
 
     args[0] = text for the opts.
@@ -531,19 +522,16 @@ if (paragraphs.length &gt; 1) {
 
     if it&#39;s got a flag attached:
     2 = flag to change
-    3 = flag value
-
-    extremely modular.
 
     normal opts
     ex: &lt;&lt;opts &quot;opts&quot; &quot;Passage&quot;&gt;&gt;
 
     opts with a flag
-    ex: &lt;&lt;opts &quot;opts with a flag&quot; &quot;Passage&quot; &quot;var&quot; &quot;value&quot;&gt;&gt;
+    ex: &lt;&lt;opts &quot;opts with a flag&quot; &quot;Passage&quot; &quot;flag&quot;&gt;&gt;
 */
 &lt;&lt;widget &quot;opts&quot;&gt;&gt;
-    &lt;&lt;run $optionmap.set($args[0], [$args[1], $args[2], $args[3]])&gt;&gt;
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="para" tags="widget nobr" position="600,225" size="100,100">/* similar to the AddParagraph widget, but with the speaker being a bullet.
+    &lt;&lt;run $optionmap.set($args[0], [$args[1], $args[2])&gt;&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="para" tags="widget nobr" position="475,225" size="100,100">/* similar to the AddParagraph widget, but with the speaker being a bullet.
 
 ex:
 normal bullet speaking
@@ -611,10 +599,12 @@ if it&#39;s a passive check:
 
     &lt;&lt;run $paragraphs.push(_bulletpara)&gt;&gt;
 &lt;&lt;/silently&gt;&gt;
-&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="StoryInit" tags="" position="725,225" size="100,100">&lt;&lt;silently&gt;&gt;
+&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="StoryInit" tags="" position="600,225" size="100,100">&lt;&lt;silently&gt;&gt;
 &lt;&lt;set $optionmap to new Map()&gt;&gt;
 &lt;&lt;set $flags to []&gt;&gt;
-&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="Start" tags="nobr" position="850,225" size="100,100">&lt;&lt;para &quot;It&#39;s time to get up.&quot; &quot;im&quot;&gt;&gt;
+&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="Start" tags="nobr" position="725,225" size="100,100">&lt;&lt;para &quot;\&quot;Hello!\&quot;&quot; &quot;ev&quot;&gt;&gt;
+&lt;&lt;para &quot;This enby has bright pink hair and an even brighter smile.&quot; &quot;ob&quot; 1&gt;&gt;
+&lt;&lt;para &quot;It&#39;s time to get up.&quot; &quot;im&quot;&gt;&gt;
 &lt;&lt;para &quot;Where the hell am I?&quot; &quot;th&quot;&gt;&gt;
 &lt;&lt;para &quot;I can&#39;t see anything.&quot; &quot;ob&quot;&gt;&gt;
     &lt;&lt;para &quot;Or hear anything or taste anything or smell or touch or feel—&quot; &quot;ob&quot; 1&gt;&gt;
@@ -640,14 +630,14 @@ if it&#39;s a passive check:
 &lt;&lt;para &quot;Get up&quot; &quot;t&quot;&gt;&gt;
 
 &lt;&lt;opts &quot;○ Find air&quot; &quot;Find air&quot;&gt;&gt;
-&lt;&lt;opts &quot;○ Get up&quot; &quot;Get up&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="Find air" tags="nobr" position="975,225" size="100,100">&lt;&lt;para &quot;I inhale —&quot; &quot;ev&quot;&gt;&gt;
+&lt;&lt;opts &quot;○ Get up&quot; &quot;Get up&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="Find air" tags="nobr" position="850,225" size="100,100">&lt;&lt;para &quot;I inhale —&quot; &quot;ev&quot;&gt;&gt;
     &lt;&lt;para &quot;I try to inhale but there&#39;s a wall in my lungs.&quot; &quot;ev&quot; 1&gt;&gt;
         &lt;&lt;para &quot;A hit to the solar plexus can knock the wind out of people.&quot; &quot;n&quot; 2&gt;&gt;
     &lt;&lt;para &quot;The air won’t come. Nothing is coming.&quot; &quot;ob&quot; 1&gt;&gt;
 &lt;&lt;para &quot;Nothing is coming.&quot; &quot;im&quot;&gt;&gt;
 &lt;&lt;para &quot;No!&quot; &quot;th&quot;&gt;&gt;
 
-&lt;&lt;opts &quot;○ Get up&quot; &quot;Get up&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="Get up" tags="nobr" position="1100,225" size="100,100">&lt;&lt;para &quot;My limbs are burning.&quot; &quot;ob&quot;&gt;&gt;
+&lt;&lt;opts &quot;○ Get up&quot; &quot;Get up&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="Get up" tags="nobr" position="975,225" size="100,100">&lt;&lt;para &quot;My limbs are burning.&quot; &quot;ob&quot;&gt;&gt;
     &lt;&lt;para &quot;Muscles aching for oxygen.&quot; &quot;n&quot; 1&gt;&gt;
 &lt;&lt;para &quot;With effort, I lift my head.&quot; &quot;ev&quot;&gt;&gt;
     &lt;&lt;para &quot;Nausea.&quot; &quot;ob&quot; 1&gt;&gt;
@@ -740,7 +730,7 @@ if it&#39;s a passive check:
             &lt;&lt;goto &quot;Wake up&quot;&gt;&gt;
         &lt;&lt;/timed&gt;&gt;
     &lt;&lt;/if&gt;&gt;
-&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="Wake up" tags="nobr" position="1225,225" size="100,100">&lt;&lt;para &quot;It&#39;s time to get up.&quot; &quot;im&quot;&gt;&gt;
+&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="Wake up" tags="nobr" position="1100,225" size="100,100">&lt;&lt;para &quot;It&#39;s time to get up.&quot; &quot;im&quot;&gt;&gt;
 &lt;&lt;para &quot;Where the hell am I?&quot; &quot;th&quot;&gt;&gt;
 &lt;&lt;para &quot;There&#39;s a blurry redness in front of me - it&#39;s all I can see at the moment.&quot; &quot;ob&quot;&gt;&gt;
     &lt;&lt;para &quot;Is this the afterlife? Did I die?!&quot; &quot;th&quot; 1&gt;&gt;
@@ -770,7 +760,7 @@ if it&#39;s a passive check:
 &lt;&lt;para &quot;Get up (again)&quot; &quot;t&quot;&gt;&gt;
 
 &lt;&lt;opts &quot;☁ Wait, how do I know what edemas and contusions are?&quot; &quot;Edemas&quot;&gt;&gt;
-&lt;&lt;opts &quot;○ Open my eyes.&quot; &quot;Open eyes&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="21" name="Edemas" tags="nobr" position="100,350" size="100,100">&lt;&lt;flag &quot;notebooktask&quot;&gt;&gt;
+&lt;&lt;opts &quot;○ Open my eyes.&quot; &quot;Open eyes&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="Edemas" tags="nobr" position="1225,225" size="100,100">&lt;&lt;flag &quot;notebooktask&quot;&gt;&gt;
 &lt;&lt;para &quot;Cold concrete walls and a droning voice. On the desk in front of me, an oblong blue pen, scrawls of notes in my -&quot; &quot;n&quot;&gt;&gt;
 &lt;&lt;para &quot;My notebook!&quot; &quot;th&quot;&gt;&gt;
 &lt;&lt;para &quot;I need that.&quot; &quot;im&quot; 1&gt;&gt;
@@ -779,7 +769,7 @@ if it&#39;s a passive check:
     &lt;&lt;para &quot;It’ll all come back when I find and reread it.&quot; &quot;n&quot; 2&gt;&gt;
             &lt;&lt;para &quot;I think.&quot; &quot;th&quot; 3&gt;&gt;
 &lt;&lt;para &quot;Find notebook&quot; &quot;t&quot;&gt;&gt;
-&lt;&lt;opts &quot;○ Open my eyes.&quot; &quot;Open eyes&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="Open eyes" tags="nobr" position="225,350" size="100,100">&lt;&lt;para &quot;I peel my mucus-crusted eyes open with effort.&quot; &quot;ev&quot;&gt;&gt;
+&lt;&lt;opts &quot;○ Open my eyes.&quot; &quot;Open eyes&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="21" name="Open eyes" tags="nobr" position="100,350" size="100,100">&lt;&lt;para &quot;I peel my mucus-crusted eyes open with effort.&quot; &quot;ev&quot;&gt;&gt;
     &lt;&lt;para &quot;It feels like prying apart locked doors.&quot; &quot;ob&quot; 1&gt;&gt;
 &lt;&lt;para &quot;Open my eyes&quot; &quot;td&quot;&gt;&gt;
 &lt;&lt;para &quot;The weak light from the fan spikes my pupils, but they quickly adjust.&quot; &quot;ob&quot;&gt;&gt;
@@ -796,7 +786,7 @@ if it&#39;s a passive check:
 &lt;&lt;para &quot;I’ve opened my eyes. Time to get up for real!&quot; &quot;im&quot;&gt;&gt;
 
 &lt;&lt;opts &quot;○ Find glasses&quot; &quot;Find glasses&quot;&gt;&gt;
-&lt;&lt;opts &quot;○ Get up (again)&quot; &quot;No glasses&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="Find glasses" tags="nobr" position="350,350" size="100,100">&lt;&lt;if $flags.includes(&quot;up&quot;) &amp;&amp; $flags.includes(&quot;jacket&quot;)&gt;&gt;
+&lt;&lt;opts &quot;○ Get up (again)&quot; &quot;No glasses&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="Find glasses" tags="nobr" position="225,350" size="100,100">&lt;&lt;if $flags.includes(&quot;up&quot;) &amp;&amp; $flags.includes(&quot;jacket&quot;)&gt;&gt;
     &lt;&lt;para &quot;I carefully crawl-shuffle back in the vicinity of where I woke up.&quot; &quot;ev&quot;&gt;&gt;
         &lt;&lt;para &quot;I look stupid.&quot; &quot;th&quot; 1&gt;&gt;
             &lt;&lt;para &quot;Well, I don&#39;t know how I look, but I imagine it&#39;s stupid.&quot; &quot;th&quot; 2&gt;&gt;
@@ -814,7 +804,7 @@ if it&#39;s a passive check:
     &lt;&lt;para &quot;After ages of cramped digging, I strike thin metal ore.&quot; &quot;ev&quot; 1&gt;&gt;
         &lt;&lt;para &quot;My glasses!&quot; &quot;th&quot; 2&gt;&gt;
 &lt;&lt;para &quot;Find glasses&quot; &quot;td&quot;&gt;&gt;
-&lt;&lt;para &quot;I put them on immediately.&quot; &quot;ev&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="No glasses" tags="nobr" position="475,350" size="100,100">&lt;&lt;flag &quot;up&quot;&gt;&gt;
+&lt;&lt;para &quot;I put them on immediately.&quot; &quot;ev&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="No glasses" tags="nobr" position="350,350" size="100,100">&lt;&lt;flag &quot;up&quot;&gt;&gt;
 &lt;&lt;para &quot;I prop myself onto my elbows.&quot; &quot;ev&quot;&gt;&gt;
 &lt;&lt;para &quot;My body seizes and I nearly collapse back down. The colors spin, then settle again.&quot; &quot;ev&quot; 1&gt;&gt;
 &lt;&lt;para &quot;I’m getting sick of being hurt.&quot; &quot;th&quot; 1&gt;&gt;
@@ -842,7 +832,7 @@ if it&#39;s a passive check:
 
 &lt;&lt;opts &quot;○ Find glasses&quot; &quot;Find glasses&quot;&gt;&gt;
 &lt;&lt;opts &quot;○ Blow this popsicle stand&quot; &quot;Leave sans glasses or clothes&quot;&gt;&gt;
-&lt;&lt;opts &quot;○ Put on clothes&quot; &quot;Clothes sans glasses&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="Clothes sans glasses" tags="nobr" position="600,350" size="100,100">&lt;&lt;flag &quot;jacket&quot;&gt;&gt;
+&lt;&lt;opts &quot;○ Put on clothes&quot; &quot;Clothes sans glasses&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="Clothes sans glasses" tags="nobr" position="475,350" size="100,100">&lt;&lt;flag &quot;jacket&quot;&gt;&gt;
 &lt;&lt;para &quot;In the muddles of browns, greys, and blacks, it’s hard to tell what’s clothing and what’s not.&quot; &quot;ob&quot;&gt;&gt;
 &lt;&lt;para &quot;I shuffle slowly with my arms out, occasionally bending down to feel out an object.&quot; &quot;ev&quot;&gt;&gt;
     &lt;&lt;para &quot;Hope I don&#39;t run into anything.&quot; &quot;th&quot; 1&gt;&gt;
@@ -880,7 +870,7 @@ if it&#39;s a passive check:
 &lt;&lt;para &quot;Find myself again&quot; &quot;td&quot;&gt;&gt;
 &lt;&lt;para &quot;Check the lining pockets!&quot; &quot;im&quot;&gt;&gt;
 
-&lt;&lt;opts &quot;○ Check the pockets.&quot; &quot;Find notebook sans glasses&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="Find notebook sans glasses" tags="nobr" position="725,350" size="100,100">&lt;&lt;flag &quot;notebook&quot;&gt;&gt;
+&lt;&lt;opts &quot;○ Check the pockets.&quot; &quot;Find notebook sans glasses&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="Find notebook sans glasses" tags="nobr" position="600,350" size="100,100">&lt;&lt;flag &quot;notebook&quot;&gt;&gt;
 &lt;&lt;addclass &quot;#story&quot; &quot;paper&quot;&gt;&gt;
     &lt;&lt;para &quot;My left hands slips deftly into the opposing pocket.&quot; &quot;ev&quot; &gt;&gt;
         &lt;&lt;para &quot;A small rectangular object, with stiff metal whorls on the side and many thin sheets.&quot; &quot;ob&quot; 1&gt;&gt;

@@ -7,16 +7,13 @@
 
     if it's got a flag attached:
     2 = flag to change
-    3 = flag value
-
-    extremely modular.
 
     normal opts
     ex: <<opts "opts" "Passage">>
 
     opts with a flag
-    ex: <<opts "opts with a flag" "Passage" "var" "value">>
+    ex: <<opts "opts with a flag" "Passage" "flag">>
 */
 <<widget "opts">>
-    <<run $optionmap.set($args[0], [$args[1], $args[2], $args[3]])>>
+    <<run $optionmap.set($args[0], [$args[1], $args[2])>>
 <</widget>>
