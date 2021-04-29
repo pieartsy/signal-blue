@@ -23,11 +23,17 @@ This looks like:
 The signifiers used are:
 
 ☐ - An incomplete task. The abbreviation is "ta" for "task added".
+
 ☑ - A complete task. The abbreviation is "td" for "task done".
+
 ➤ - A note, something that Kim wants to remember or take note of. It can also be a relevant fact or deduction about a situation. The abbreviation is "n" for "note".
+
 ☁ - A thought that Kim has about a situation. The abbreviation is "th" for "thought".
+
 ○ - An event, used to describe actions that happen. The abbreviation is "ev" for "event".
+
 ◇ - An observation, something Kim perceives with his senses. The abbreviation is "ob" for "observation".
+
 ‼ - Something deemed highly important by Kim. The abbreviation is "im" for "important".
 
 To indent by 1 em-dash, write 1 for the third argument. For 2 em-dashes, write 2, and so on. These numbers are standalone; they don't need quotes.
